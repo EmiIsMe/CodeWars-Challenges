@@ -33,9 +33,14 @@ function solve(s){
 //post mortem
 //ran into bugs and couldn't my 25 minutes mark. Solutions below :p
 //closest: 
+
+//creating an arrow function
 const solve = (s) => {
+    //creating a bucket for the counts;
     let result = [0, 0, 0, 0];
+    // using a for loop to go through the string
     for (let i = 0; i < s.length; i += 1) {
+      //defining the conditional- 'if the string toLowercase is less than the character, target the correct index and add 1
       if (s[i].toLowerCase() > s[i]) {
         result[0] += 1;
       } else if (s[i].toUpperCase() < s[i]) {
@@ -49,6 +54,8 @@ const solve = (s) => {
     return result;
   };
 
+  //weakness- does not define the indexes, so while it returns correctly it's hard for another person to make sense of on glance and more challenging to call in other parts of the code.
+
 //best practice
 const solve = x => {
     let u = x.match(/[A-Z]/g)||[]
@@ -57,5 +64,6 @@ const solve = x => {
     let s = x.match(/[^A-Z0-9]/gi)||[]
     return [u.length, d.length, n.length, s.length]
   }
+  //strength: defines all variables properly, more efficient and easily readable. length method used to return the integer.
 
 //match seems cool! I'll check out how to use it, it seems to be exactly what I was looking for and didn't know how to reach.
