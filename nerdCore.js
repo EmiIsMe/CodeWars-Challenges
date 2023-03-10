@@ -5,8 +5,8 @@ function nerdify(txt){
   let nerdCore = txt;
   console.log(nerdCore)
 
-  nerdCore.replace(/a | A/, "4");console.log(nerdCore);
-  nerdCore.replace(/e |E/, "3");
+  nerdCore.replace(/a|A/,"4");console.log(nerdCore);
+  nerdCore.replace(/e|E/,"3");
   nerdCore.replace(/l | L/, "1");
 
 
